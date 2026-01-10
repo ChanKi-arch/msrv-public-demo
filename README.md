@@ -31,14 +31,10 @@ This repository provides a **fully reproducible public demo** including:
 
 | Format | Link |
 |--------|------|
-| **ZIP (source)** | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-final.zip |
-| **TAR.GZ (source)** | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-final.tar.gz |
-| **Release page** | https://github.com/ChanKi-arch/msrv-public-demo/releases/tag/v2.5.5-final |
-
-> **Note**  
-> ZIP / TAR.GZ links are **source archives generated from the Git tag**.  
-> They contain the full demo engine, benchmark data, and reproducibility tools.
-
+| **ZIP** | [v2.5.5-final.zip](https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-final.zip) |
+| **TAR.GZ** | [v2.5.5-final.tar.gz](https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-final.tar.gz) |
+| **Release** | [Releases Page](https://github.com/ChanKi-arch/msrv-public-demo/releases/tag/v2.5.5-final) |
+> Note: ZIP/TAR.GZ are source archives generated from the Git tag.
 ---
 
 ## 📌 Key Concepts
@@ -46,24 +42,19 @@ This repository provides a **fully reproducible public demo** including:
 | Term | Description |
 |------|-------------|
 | **Engine** | Structural routing and scoring engine (public demo version) |
-| **Tier** | MINI / STANDARD / PREMIUM (cost vs quality levels) |
+| **Tier** | MINI / STANDARD / PREMIUM (cost vs. quality levels) |
 | **Mode** | CONSERVATIVE / BALANCED / AGGRESSIVE runtime presets |
 | **Routing** | Deterministic selection of tier per request |
-| **Gateway** | Defined in the main MSR-V governance repository (not included here) |
 
-> **Naming note**  
-> Older documents may reference `BYPASS / LITE / FULL` — these map directly to  
-> `MINI / STANDARD / PREMIUM` in this release.
+> **Naming Note**: Legacy docs may reference `BYPASS / LITE / FULL` — these map 1:1 to `MINI / STANDARD / PREMIUM`.
 
 ---
 
 ## 📊 Benchmark Results (v2.5.5-final)
 
-**Total samples:** 4,200  
-**Languages:** Korean & English  
-**Domains:** Normal / Negation / Hard  
-**Structural alignment:** 89.8%  
-**Governance latency:** 0.3–2 ms
+**Total Samples:** 4,200 (Korean & English × Normal / Negation / Hard)  
+**Structural Alignment:** 89.8%  
+**Governance Latency:** 0.3–2 ms
 
 | Mode | MINI | STANDARD | PREMIUM | Cost Reduction |
 |------|-----:|--------:|--------:|---------------:|
@@ -71,65 +62,59 @@ This repository provides a **fully reproducible public demo** including:
 | ⚖️ **BALANCED** | 1,019 (24.3%) | 2,873 (68.4%) | 308 (7.3%) | 71.7% |
 | 🚀 **AGGRESSIVE** | 2,595 (61.8%) | 1,387 (33.0%) | 218 (5.2%) | **83.7%** |
 
-Full detailed results are available in:  
-`report/benchmark_report.md` and `BENCHMARK_SUMMARY.md`
+Full details: [`report/benchmark_report.md`](report/benchmark_report.md), [`BENCHMARK_SUMMARY.md`](BENCHMARK_SUMMARY.md)
 
 ---
 
 ## 🎛️ Mode Selection
 
-| Mode | Use case | MINI routing |
+| Mode | Use Case | MINI Routing |
 |------|----------|--------------|
-| 🔒 **CONSERVATIVE** | Pilot, regulated or safety-critical | Disabled |
+| 🔒 **CONSERVATIVE** | Pilot / regulated / safety-critical | Disabled |
 | ⚖️ **BALANCED** | General production (recommended) | Moderate |
-| 🚀 **AGGRESSIVE** | Cost-optimized, trusted MINI | Maximized |
+| 🚀 **AGGRESSIVE** | Cost-optimized with trusted MINI | Maximized |
 
 ---
 
 ## 📍 Quick Start
-
 ```bash
 git clone https://github.com/ChanKi-arch/msrv-public-demo
 cd msrv-public-demo
 git checkout v2.5.5-final
 pip install -r requirements.txt
 
-# CLI demo
+# CLI Demo
 python demo/demo_cli.py
 
 # Web UI
 streamlit run demo/web_ui.py
-
+```
 
 ---
 
-🧪 Reproduce Benchmarks
-
+## 🧪 Reproduce Benchmarks
+```bash
 python tools/msrv_benchmark_unified.py \
   --mode balanced \
   --output report/benchmark_report.md \
   --summary-json report/benchmark_summary.json
+```
 
-Generated artifacts:
-
-report/benchmark_*_summary.json — aggregated metrics
-
-report/benchmark_*_details.jsonl — per-sample traces
-
-report/benchmark_report.md — full human-readable report
-
-
+**Generated artifacts:**
+- `report/benchmark_*_summary.json` — Aggregated metrics
+- `report/benchmark_*_details.jsonl` — Per-sample traces
+- `report/benchmark_report.md` — Human-readable report
 
 ---
 
-📁 Repository Structure
-
+## 📁 Repository Structure
+```
 msrv-public-demo/
 ├── demo/
-│   ├── engine.py
-│   ├── demo_cli.py
-│   ├── web_ui.py
-│   └── public_samples.json
+│   ├── engine.py              # Public demo engine
+│   ├── demo_cli.py            # CLI interface
+│   ├── web_ui.py              # Streamlit Web UI
+│   └── public_samples.json    # Sample data
 ├── docs/
 │   ├── ARCHITECTURE_OVERVIEW.md
 │   ├── FAQ.md
@@ -144,38 +129,32 @@ msrv-public-demo/
 ├── README.md
 ├── LICENSE
 └── requirements.txt
-
-
----
-
-📚 Documentation
-
-File	Description
-
-docs/ARCHITECTURE_OVERVIEW.md	Structural routing architecture
-docs/FAQ.md	Frequently asked questions
-docs/GOVERNANCE_PHILOSOPHY.md	Safety & governance design
-BENCHMARK_SUMMARY.md	Quick benchmark overview
-
-
+```
 
 ---
 
-🔐 IP & Safety Notice
+## 📚 Documentation
 
-This repository contains a public demo engine and reproducible benchmark artifacts.
-
-The proprietary MSR-V production engine, provider gateways, tuning logic, and credentials are not included.
-
-This package is intended for evaluation, benchmarking, and governance inspection.
-
+| Document | Description |
+|----------|-------------|
+| [ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md) | Structural routing architecture |
+| [FAQ.md](docs/FAQ.md) | Frequently asked questions |
+| [GOVERNANCE_PHILOSOPHY.md](docs/GOVERNANCE_PHILOSOPHY.md) | Safety & governance design |
+| [BENCHMARK_SUMMARY.md](BENCHMARK_SUMMARY.md) | Quick benchmark overview |
 
 ---
 
-📄 License
+## 🔐 IP & Safety Notice
 
-Apache License 2.0 — see LICENSE.
+This repository contains a **public demo engine** and **reproducible benchmark artifacts**.
 
+The proprietary MSR-V production engine, provider gateways, tuning logic, and credentials are **not included**.
+
+---
+
+## 📄 License
+
+[Apache License 2.0](LICENSE)
 
 ---
 
@@ -183,5 +162,3 @@ Apache License 2.0 — see LICENSE.
 <strong>MSR-V White Engine</strong><br/>
 Control reasoning depth, not tokens.
 </p>
-```
----
