@@ -27,6 +27,17 @@ This repository provides a **fully reproducible public demo** including:
 
 ---
 
+## 🛡 Public Demo Clarification
+
+This repository provides a **public, reproducible demo** of the MSR-V governance architecture.
+
+It demonstrates routing logic, structural classification, and benchmarking outputs *without exposing the proprietary core engine*.  
+Fallback heuristics and precomputed samples are used to preserve interface behavior and enable safe evaluation without revealing private reasoning logic.
+
+This demo is meant for **architectural inspection and governance exploration**, not for factual accuracy or real inference performance.
+
+---
+  
 ## 📦 Download
 
 | Format | Link |
@@ -35,6 +46,7 @@ This repository provides a **fully reproducible public demo** including:
 | **TAR.GZ** | [v2.5.5-final.tar.gz](https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-final.tar.gz) |
 | **Release** | [Releases Page](https://github.com/ChanKi-arch/msrv-public-demo/releases/tag/v2.5.5-final) |
 > Note: ZIP/TAR.GZ are source archives generated from the Git tag.
+
 ---
 
 ## 📌 Key Concepts
