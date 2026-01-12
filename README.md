@@ -6,130 +6,176 @@
 
 # MSR-V White Engine — Public Demo (v2.5.5-patch)
 
-**White-box Structural Routing & Control Layer for LLM Orchestration**  
+White-box Structural Routing & Control Layer for LLM Orchestration
 Control reasoning depth, not tokens.
+
 
 ---
 
-## 🚀 Overview
+🚀 Overview
 
-MSR-V is a white-box governance layer that decides **how much reasoning / which tier is structurally necessary — before an LLM runs.**
+MSR-V is a white-box governance layer that decides how much reasoning / which tier is structurally necessary — before an LLM runs.
 
-- It is **not a model** itself.
-- It enables **cost reduction** with explicit safety controls using **deterministic, traceable routing logic**.
+It is not a model itself.
+
+It enables cost reduction with explicit safety controls using deterministic, traceable routing logic.
+
 
 This repository provides a fully reproducible public demo including:
 
-- Public demo routing engine
-- CLI & Web UI interfaces
-- Complete benchmark artifacts (4,200 samples)
-- Machine-readable and human-readable evaluation results
-- Gateway benchmark artifacts (adapter/gateway path)
+Public demo routing engine
+
+CLI & Web UI interfaces
+
+Complete benchmark artifacts (4,200 samples)
+
+Machine-readable and human-readable evaluation results
+
+Gateway benchmark artifacts (adapter/gateway path)
+
+
 
 ---
 
-## 🛡 Public Demo Clarification (IP / Safety)
+🛡 Public Demo Clarification (IP / Safety)
 
 This repository is a public, reproducible demo of the MSR-V governance architecture.
 
 It demonstrates:
 
-- routing logic
-- structural classification
-- trace fields
-- benchmark reproducibility
+routing logic
+
+structural classification
+
+trace fields
+
+benchmark reproducibility
+
 
 …without exposing proprietary production internals (advanced parsers, private policy tuning logic, provider-side details, credentials).
 
 Some components may use heuristic fallback and/or precomputed samples to preserve interface behavior while keeping the core IP protected.
 
-> This demo is intended for architectural inspection and governance evaluation  
-> (i.e., “Is routing deterministic, traceable, and safe?”),  
-> not for claiming real-world model accuracy or domain truthfulness.
+> This demo is intended for architectural inspection and governance evaluation
+(i.e., “Is routing deterministic, traceable, and safe?”),
+not for claiming real-world model accuracy or domain truthfulness.
+
+
+
 
 ---
 
-## 🔒 Governance Rule (v2.5.5-patch)
+🔒 Governance Rule (v2.5.5-patch)
 
-The public demo enforces the same **Fracture → STANDARD/PREMIUM** governance rule  
+The public demo enforces the same Fracture → STANDARD/PREMIUM governance rule
 as the proprietary MSR-V White Engine, even when heuristic fallback is used.
 
-**Fracture state → MUST route to STANDARD or PREMIUM, NEVER MINI**
+Fracture state → MUST route to STANDARD or PREMIUM, NEVER MINI
+
 
 ---
 
-## 📦 Download
+📦 Download
 
-| Format | Link |
-|---|---|
-| ZIP | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-patch.zip |
-| TAR.GZ | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-patch.tar.gz |
-| Release | https://github.com/ChanKi-arch/msrv-public-demo/releases/tag/v2.5.5-patch |
+Format	Link
+
+ZIP	v2.5.5-patch.zip
+TAR.GZ	v2.5.5-patch.tar.gz
+Release	Releases page
+
 
 > Note: ZIP/TAR.GZ are source archives generated from the Git tag.
 
----
 
-## 📌 Key Concepts
 
-| Term | Description |
-|---|---|
-| Engine | Structural routing and scoring engine (public demo version) |
-| Tier | MINI / STANDARD / PREMIUM (cost vs. quality levels) |
-| Mode | CONSERVATIVE / BALANCED / AGGRESSIVE runtime presets |
-| Routing | Deterministic tier selection per request |
-
-> Naming Note: Legacy docs may reference BYPASS / LITE / FULL — these map 1:1 to MINI / STANDARD / PREMIUM.
 
 ---
 
-## 📊 Benchmark Results (v2.5.5-patch)
+📌 Key Concepts
 
-- **Benchmark date:** 2026-01-11  
-- **Total samples:** 4,200 (KO/EN × Normal/Negation/Hard)  
-- **Cost weights:** MINI=2, STANDARD=30, PREMIUM=100 (PREMIUM baseline)
+Term	Description
 
-| Mode | MINI | STANDARD | PREMIUM | Cost Reduction | Avg Latency | Fracture→MINI |
-|---|---:|---:|---:|---:|---:|---:|
-| CONSERVATIVE | 0 (0.0%) | 3817 (90.9%) | 383 (9.1%) | 63.6% | 0.87 ms | 0 |
-| BALANCED | 961 (22.9%) | 2856 (68.0%) | 383 (9.1%) | 70.0% | 0.85 ms | 0 |
-| AGGRESSIVE | 2444 (58.2%) | 1374 (32.7%) | 382 (9.1%) | 79.9% | 0.86 ms | 0 |
+Engine	Structural routing and scoring engine (public demo version)
+Tier	MINI / STANDARD / PREMIUM (cost vs. quality levels)
+Mode	CONSERVATIVE / BALANCED / AGGRESSIVE runtime presets
+Routing	Deterministic tier selection per request
 
-✅ **Safety Validation:** All Fracture samples correctly routed to STANDARD/PREMIUM (**0 → MINI**)
 
-- Full report: `report/BENCHMARK_REPORT.md`
-- Machine-readable: `report/benchmark_*_summary.json`, `report/benchmark_*_details.jsonl`
+> Naming note: legacy docs may reference BYPASS / LITE / FULL — these map 1:1 to MINI / STANDARD / PREMIUM.
+
+
+
 
 ---
 
-## 🧭 What “Gateway Benchmark” means
+📊 Benchmark Results (v2.5.5-patch)
+
+Benchmark date: 2026-01-11
+
+Total samples: 4,200 (KO/EN × Normal/Negation/Hard)
+
+Cost weights: MINI=2, STANDARD=30, PREMIUM=100 (PREMIUM baseline)
+
+
+Mode	MINI	STANDARD	PREMIUM	Cost Reduction	Avg Latency	Fracture→MINI
+
+🔒 CONSERVATIVE	0 (0.0%)	3,817 (90.9%)	383 (9.1%)	63.6%	0.87 ms	✅ 0
+⚖️ BALANCED	961 (22.9%)	2,856 (68.0%)	383 (9.1%)	70.0%	0.85 ms	✅ 0
+🚀 AGGRESSIVE	2,444 (58.2%)	1,374 (32.7%)	382 (9.1%)	79.9%	0.86 ms	✅ 0
+
+
+✅ Safety validation: all Fracture samples correctly routed to STANDARD/PREMIUM (0 → MINI)
+
+Full report: report/BENCHMARK_REPORT.md
+
+Machine-readable: report/benchmark_*_summary.json, report/benchmark_*_details.jsonl
+
+
+
+---
+
+🧭 What “Gateway Benchmark” means
 
 In addition to the engine benchmark, this repo includes gateway/adapter benchmark artifacts to show:
 
-- routing + policy overhead in a gateway-ready path
-- per-mode summaries
-- detailed traces similar to the engine benchmark
+routing + policy overhead in a gateway-ready path
 
-- Gateway report: `Gateway report/gateway_benchmark_report.md`  
-  (relative link: `Gateway%20report/gateway_benchmark_report.md`)
-- Machine-readable: `Gateway report/gateway_*_summary.json`, `Gateway report/gateway_*_details.jsonl`  
-  (relative links: `Gateway%20report/gateway_*_summary.json`, `Gateway%20report/gateway_*_details.jsonl`)
+per-mode summaries
+
+detailed traces similar to the engine benchmark
+
+
+Gateway report
+
+Gateway report/gateway_benchmark_report.md
+(URL-safe path: Gateway%20report/gateway_benchmark_report.md)
+
+
+Gateway machine-readable artifacts
+
+Gateway report/gateway_*_summary.json
+
+Gateway report/gateway_*_details.jsonl
+(URL-safe path: Gateway%20report/gateway_*_summary.json, Gateway%20report/gateway_*_details.jsonl)
+
+
 
 ---
 
-## 🎛️ Mode Selection
+🎛️ Mode Selection
 
-| Mode | Use Case | MINI Routing |
-|---|---|---|
-| CONSERVATIVE | Pilot / regulated / safety-critical | Effectively disabled |
-| BALANCED | General production (recommended) | Moderate |
-| AGGRESSIVE | Cost-optimized with trusted MINI | Maximized |
+Mode	Use Case	MINI Routing
+
+🔒 CONSERVATIVE	Pilot / regulated / safety-critical	Effectively disabled
+⚖️ BALANCED	General production (recommended)	Moderate
+🚀 AGGRESSIVE	Cost-optimized with trusted MINI	Maximized
+
+
 
 ---
 
-## 📍 Quick Start
+📍 Quick Start
 
-```bash
 pip install -r requirements.txt
 
 # CLI
@@ -137,7 +183,7 @@ python demo/demo_cli.py
 
 # Web UI (Streamlit)
 streamlit run demo/web_ui.py
-```
+
 
 ---
 
@@ -148,7 +194,7 @@ python tools/msrv_benchmark_unified.py \
   --output report/BENCHMARK_REPORT.md \
   --summary-json report/benchmark_balanced_summary.json
 
-Generated artifacts:
+Generated artifacts
 
 report/benchmark_*_summary.json — Aggregated metrics
 
