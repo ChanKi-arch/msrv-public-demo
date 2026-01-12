@@ -142,6 +142,50 @@ streamlit run demo/web_ui.py
 
 ---
 
+## 🧪 Demo Run Guide (1 minute)
+
+This demo lets you see how MSR-V governs reasoning, not how an LLM answers.
+
+This public demo runs in a fixed Balanced governance profile
+to allow reproducible validation of the routing and safety rules.
+
+The production MSR-V engine supports multiple governance modes.
+
+
+---
+
+1. Install
+
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+2. Run CLI (recommended first)
+
+python demo/demo_cli.py
+
+```bash
+You will see: [balanced]>
+```
+
+Type any sentence, for example:
+
+The speed of light is always infinite
+
+The engine will output:
+
+route → MINI / STANDARD / PREMIUM  
+state4 → Harmony / Alignment / Divergence / Fracture  
+Zs, theta, need → stability & governance signals
+
+This shows how much reasoning MSR-V allows and how risky the structure is.
+
+
+---
+
 ## 🧪 Reproduce Benchmarks
 
 ```bash
