@@ -61,12 +61,12 @@ Fracture state → MUST route to STANDARD or PREMIUM, NEVER MINI
 ## 📦 Download
 
 | Format | Link |
-|--------|------|
-| ZIP | [v2.5.5-patch.zip](../../releases/download/v2.5.5-patch/msrv-public-demo-v255-patch.zip) |
-| TAR.GZ | [v2.5.5-patch.tar.gz](../../releases/download/v2.5.5-patch/msrv-public-demo-v255-patch.tar.gz) |
-| Release | [Releases page](../../releases) |
+|---|---|
+| ZIP | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-patch.zip |
+| TAR.GZ | https://github.com/ChanKi-arch/msrv-public-demo/archive/refs/tags/v2.5.5-patch.tar.gz |
+| Release | https://github.com/ChanKi-arch/msrv-public-demo/releases/tag/v2.5.5-patch |
 
-> **Note:** ZIP/TAR.GZ are source archives generated from the Git tag.
+> Note: ZIP/TAR.GZ are source archives generated from the Git tag.
 
 ---
 
