@@ -137,7 +137,7 @@ python demo/demo_cli.py
 
 # Web UI (Streamlit)
 streamlit run demo/web_ui.py
-
+```
 
 ---
 
