@@ -1,0 +1,351 @@
+{
+  "title": "MSR-V v2.5.5 Benchmark Summary",
+  "version": "2.5.5",
+  "generated": "2026-01-11 14:24:56",
+  "total_samples": 4200,
+  "datasets": {
+    "ko-norm": {
+      "name": "한국어 일반",
+      "lang": "KO",
+      "count": 1000
+    },
+    "ko-neg": {
+      "name": "한국어 부정",
+      "lang": "KO",
+      "count": 1000
+    },
+    "ko-hard": {
+      "name": "한국어 고난도",
+      "lang": "KO",
+      "count": 100
+    },
+    "en-norm": {
+      "name": "영어 일반",
+      "lang": "EN",
+      "count": 1000
+    },
+    "en-neg": {
+      "name": "영어 부정",
+      "lang": "EN",
+      "count": 1000
+    },
+    "en-hard": {
+      "name": "영어 고난도",
+      "lang": "EN",
+      "count": 100
+    }
+  },
+  "cost_weights": {
+    "MINI": 2,
+    "STANDARD": 30,
+    "PREMIUM": 100
+  },
+  "results": {
+    "conservative": {
+      "datasets": {
+        "ko-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 1000,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 70.0,
+          "avg_latency": 0.314,
+          "white_trace_rate": 100.0
+        },
+        "ko-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 1000,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 70.0,
+          "avg_latency": 0.267,
+          "white_trace_rate": 100.0
+        },
+        "ko-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 98,
+            "PREMIUM": 2
+          },
+          "fracture_total": 1,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 68.6,
+          "avg_latency": 0.58,
+          "white_trace_rate": 100.0
+        },
+        "en-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 849,
+            "PREMIUM": 151
+          },
+          "fracture_total": 151,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 59.43,
+          "avg_latency": 1.561,
+          "white_trace_rate": 100.0
+        },
+        "en-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 787,
+            "PREMIUM": 213
+          },
+          "fracture_total": 213,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 55.09,
+          "avg_latency": 1.256,
+          "white_trace_rate": 100.0
+        },
+        "en-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 83,
+            "PREMIUM": 17
+          },
+          "fracture_total": 17,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 58.1,
+          "avg_latency": 1.751,
+          "white_trace_rate": 100.0
+        }
+      },
+      "total": {
+        "count": 4200,
+        "routes": {
+          "MINI": 0,
+          "STANDARD": 3817,
+          "PREMIUM": 383
+        },
+        "fracture_total": 382,
+        "fracture_mini": 0,
+        "white_trace_ok": 4200,
+        "cost_savings": 63.62,
+        "avg_latency": 0.865,
+        "white_trace_rate": 100.0
+      }
+    },
+    "balanced": {
+      "datasets": {
+        "ko-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 39,
+            "STANDARD": 961,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 71.09,
+          "avg_latency": 0.306,
+          "white_trace_rate": 100.0
+        },
+        "ko-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 1000,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 70.0,
+          "avg_latency": 0.26,
+          "white_trace_rate": 100.0
+        },
+        "ko-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 0,
+            "STANDARD": 98,
+            "PREMIUM": 2
+          },
+          "fracture_total": 1,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 68.6,
+          "avg_latency": 0.555,
+          "white_trace_rate": 100.0
+        },
+        "en-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 451,
+            "STANDARD": 398,
+            "PREMIUM": 151
+          },
+          "fracture_total": 151,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 72.06,
+          "avg_latency": 1.535,
+          "white_trace_rate": 100.0
+        },
+        "en-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 417,
+            "STANDARD": 370,
+            "PREMIUM": 213
+          },
+          "fracture_total": 213,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 66.77,
+          "avg_latency": 1.239,
+          "white_trace_rate": 100.0
+        },
+        "en-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 54,
+            "STANDARD": 29,
+            "PREMIUM": 17
+          },
+          "fracture_total": 17,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 73.22,
+          "avg_latency": 1.769,
+          "white_trace_rate": 100.0
+        }
+      },
+      "total": {
+        "count": 4200,
+        "routes": {
+          "MINI": 961,
+          "STANDARD": 2856,
+          "PREMIUM": 383
+        },
+        "fracture_total": 382,
+        "fracture_mini": 0,
+        "white_trace_ok": 4200,
+        "cost_savings": 70.02,
+        "avg_latency": 0.85,
+        "white_trace_rate": 100.0
+      }
+    },
+    "aggressive": {
+      "datasets": {
+        "ko-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 622,
+            "STANDARD": 378,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 87.42,
+          "avg_latency": 0.304,
+          "white_trace_rate": 100.0
+        },
+        "ko-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 568,
+            "STANDARD": 432,
+            "PREMIUM": 0
+          },
+          "fracture_total": 0,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 85.9,
+          "avg_latency": 0.263,
+          "white_trace_rate": 100.0
+        },
+        "ko-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 59,
+            "STANDARD": 40,
+            "PREMIUM": 1
+          },
+          "fracture_total": 1,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 85.82,
+          "avg_latency": 0.589,
+          "white_trace_rate": 100.0
+        },
+        "en-norm": {
+          "count": 1000,
+          "routes": {
+            "MINI": 510,
+            "STANDARD": 339,
+            "PREMIUM": 151
+          },
+          "fracture_total": 151,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 73.71,
+          "avg_latency": 1.56,
+          "white_trace_rate": 100.0
+        },
+        "en-neg": {
+          "count": 1000,
+          "routes": {
+            "MINI": 623,
+            "STANDARD": 164,
+            "PREMIUM": 213
+          },
+          "fracture_total": 213,
+          "fracture_mini": 0,
+          "white_trace_ok": 1000,
+          "cost_savings": 72.53,
+          "avg_latency": 1.258,
+          "white_trace_rate": 100.0
+        },
+        "en-hard": {
+          "count": 100,
+          "routes": {
+            "MINI": 62,
+            "STANDARD": 21,
+            "PREMIUM": 17
+          },
+          "fracture_total": 17,
+          "fracture_mini": 0,
+          "white_trace_ok": 100,
+          "cost_savings": 75.46,
+          "avg_latency": 1.744,
+          "white_trace_rate": 100.0
+        }
+      },
+      "total": {
+        "count": 4200,
+        "routes": {
+          "MINI": 2444,
+          "STANDARD": 1374,
+          "PREMIUM": 382
+        },
+        "fracture_total": 382,
+        "fracture_mini": 0,
+        "white_trace_ok": 4200,
+        "cost_savings": 79.93,
+        "avg_latency": 0.862,
+        "white_trace_rate": 100.0
+      }
+    }
+  }
+}

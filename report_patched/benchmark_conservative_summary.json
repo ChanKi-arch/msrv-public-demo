@@ -1,0 +1,152 @@
+{
+  "title": "MSR-V v2.5.5 Benchmark - CONSERVATIVE Mode",
+  "mode": "conservative",
+  "engine_version": "2.5.5",
+  "generated": "2026-01-11 14:29:14",
+  "total_samples": 4200,
+  "cost_weights": {
+    "MINI": 2,
+    "STANDARD": 30,
+    "PREMIUM": 100
+  },
+  "by_domain": {
+    "ko-norm": {
+      "name": "한국어 일반",
+      "lang": "KO",
+      "count": 1000,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 1000,
+        "PREMIUM": 0
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 100.0,
+        "PREMIUM": 0.0
+      },
+      "cost_savings_pct": 70.0,
+      "avg_latency_ms": 0.314,
+      "fracture_total": 0,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    },
+    "ko-neg": {
+      "name": "한국어 부정",
+      "lang": "KO",
+      "count": 1000,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 1000,
+        "PREMIUM": 0
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 100.0,
+        "PREMIUM": 0.0
+      },
+      "cost_savings_pct": 70.0,
+      "avg_latency_ms": 0.267,
+      "fracture_total": 0,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    },
+    "ko-hard": {
+      "name": "한국어 고난도",
+      "lang": "KO",
+      "count": 100,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 98,
+        "PREMIUM": 2
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 98.0,
+        "PREMIUM": 2.0
+      },
+      "cost_savings_pct": 68.6,
+      "avg_latency_ms": 0.58,
+      "fracture_total": 1,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    },
+    "en-norm": {
+      "name": "영어 일반",
+      "lang": "EN",
+      "count": 1000,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 849,
+        "PREMIUM": 151
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 84.9,
+        "PREMIUM": 15.1
+      },
+      "cost_savings_pct": 59.43,
+      "avg_latency_ms": 1.561,
+      "fracture_total": 151,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    },
+    "en-neg": {
+      "name": "영어 부정",
+      "lang": "EN",
+      "count": 1000,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 787,
+        "PREMIUM": 213
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 78.7,
+        "PREMIUM": 21.3
+      },
+      "cost_savings_pct": 55.09,
+      "avg_latency_ms": 1.256,
+      "fracture_total": 213,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    },
+    "en-hard": {
+      "name": "영어 고난도",
+      "lang": "EN",
+      "count": 100,
+      "routes": {
+        "MINI": 0,
+        "STANDARD": 83,
+        "PREMIUM": 17
+      },
+      "route_pcts": {
+        "MINI": 0.0,
+        "STANDARD": 83.0,
+        "PREMIUM": 17.0
+      },
+      "cost_savings_pct": 58.1,
+      "avg_latency_ms": 1.751,
+      "fracture_total": 17,
+      "fracture_mini": 0,
+      "white_trace_rate": 100.0
+    }
+  },
+  "total": {
+    "count": 4200,
+    "routes": {
+      "MINI": 0,
+      "STANDARD": 3817,
+      "PREMIUM": 383
+    },
+    "route_pcts": {
+      "MINI": 0.0,
+      "STANDARD": 90.88,
+      "PREMIUM": 9.12
+    },
+    "cost_savings_pct": 63.62,
+    "avg_latency_ms": 0.865,
+    "fracture_total": 382,
+    "fracture_mini": 0,
+    "white_trace_rate": 100.0
+  }
+}

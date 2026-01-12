@@ -1,0 +1,22 @@
+{
+  "mode": "aggressive",
+  "total_samples": 4200,
+  "route_counts": {
+    "MINI": 2444,
+    "STANDARD": 1374,
+    "PREMIUM": 382
+  },
+  "route_pcts": {
+    "MINI": 58.19047619047619,
+    "STANDARD": 32.714285714285715,
+    "PREMIUM": 9.095238095238095
+  },
+  "cost_savings_pct": 79.93,
+  "avg_latency_ms": 0.9172,
+  "total_time_sec": 3.866,
+  "fracture_count": 382,
+  "fracture_mini": 0,
+  "timestamp": "2026-01-11 14:05:26",
+  "gateway_version": "1.1.1",
+  "engine_version": "2.5.5-patch-fracture"
+}
