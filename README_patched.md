@@ -53,7 +53,7 @@ Some components may use **heuristic fallback and/or precomputed samples** to pre
 The public demo enforces the same **Fracture → STANDARD/PREMIUM** governance rule
 as the proprietary MSR-V White Engine, even when heuristic fallback is used.
 
-```txt
+txt
 Fracture state → MUST route to STANDARD or PREMIUM, NEVER MINI
 
 
