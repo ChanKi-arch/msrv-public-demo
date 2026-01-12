@@ -1,5 +1,0 @@
-# MSR-V Public Demo v2.5.5 Requirements
-# Python >= 3.8 required
-
-streamlit>=1.34
-pandas>=1.5
